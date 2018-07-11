@@ -1,24 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Model Urself View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ModelUrselfViewController" customModule="ModelUrself" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oq8-Fc-1ED" userLabel="Product Stack View">
+                                <rect key="frame" x="55" y="306" width="210" height="225"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2xT-lt-MoX">
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="185"/>
+                                        <color key="backgroundColor" red="1" green="0.27845749863434954" blue="0.72307976226004744" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="185" id="OR9-Lv-HLc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvH-oi-iDA">
+                                        <rect key="frame" x="77" y="195" width="56" height="30"/>
+                                        <color key="backgroundColor" red="0.96621346473693848" green="0.62164588179864388" blue="0.92711397204746471" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Try Me!!"/>
+                                        <connections>
+                                            <action selector="showOptionsForPhotos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zhc-o3-i3E"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="jvH-oi-iDA" secondAttribute="bottom" id="sJt-aM-VUo"/>
+                                    <constraint firstItem="2xT-lt-MoX" firstAttribute="leading" secondItem="oq8-Fc-1ED" secondAttribute="leading" id="sUM-6l-yV9"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G3G-Fd-aOq" userLabel="Selfie Stack View">
+                                <rect key="frame" x="55" y="50" width="210" height="215"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="68X-u3-VXR">
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="185"/>
+                                        <color key="backgroundColor" red="0.96621346473693848" green="0.31016580991017223" blue="0.3407006592666314" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </imageView>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgc-qw-xUK">
+                                        <rect key="frame" x="54" y="195" width="102" height="20"/>
+                                        <color key="backgroundColor" red="0.96621346473693848" green="0.58727785046768943" blue="0.93013993005790607" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Model Yourself"/>
+                                        <connections>
+                                            <action selector="showOptionsForPhotos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xbP-ok-kZH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Xgc-qw-xUK" firstAttribute="top" secondItem="68X-u3-VXR" secondAttribute="bottom" constant="10" id="TrU-Yl-WiK"/>
+                                    <constraint firstItem="68X-u3-VXR" firstAttribute="leading" secondItem="G3G-Fd-aOq" secondAttribute="leading" id="cZx-vo-gb7"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G3G-Fd-aOq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3ia-4c-y4a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oq8-Fc-1ED" secondAttribute="bottom" constant="37" id="8ac-wD-n8e"/>
+                            <constraint firstItem="oq8-Fc-1ED" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="Tn9-jv-bIo"/>
+                            <constraint firstItem="G3G-Fd-aOq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="UdB-6Z-dTh"/>
+                            <constraint firstItem="oq8-Fc-1ED" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cPV-H1-VUJ"/>
+                            <constraint firstItem="oq8-Fc-1ED" firstAttribute="top" secondItem="G3G-Fd-aOq" secondAttribute="bottom" constant="41" id="nYl-0L-oRa"/>
+                            <constraint firstItem="G3G-Fd-aOq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="vtK-VH-54h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="modelUrselfButton" destination="Xgc-qw-xUK" id="GBx-Xk-F0c"/>
+                        <outlet property="productImageView" destination="2xT-lt-MoX" id="wKx-Tg-DTy"/>
+                        <outlet property="selfieImageView" destination="68X-u3-VXR" id="ng0-az-3aR"/>
+                        <outlet property="tryMeButton" destination="jvH-oi-iDA" id="Ctp-of-rY7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="31.875" y="32.74647887323944"/>
         </scene>
     </scenes>
 </document>
