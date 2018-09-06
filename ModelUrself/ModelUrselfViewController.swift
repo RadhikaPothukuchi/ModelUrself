@@ -32,6 +32,7 @@ class ModelUrselfViewController: UIViewController,UINavigationControllerDelegate
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
  
     @IBAction func showOptionsForPhotos(_ sender: UIButton) {
         //TODO:check for sender
@@ -82,6 +83,12 @@ extension ModelUrselfViewController : UIImagePickerControllerDelegate {
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.imagePickerController.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first
+        print("touched: \(String(describing: touch?.location(in: self.view).x)) , \(String(describing:touch?.location(in: self.view).y))" )
     }
  
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
